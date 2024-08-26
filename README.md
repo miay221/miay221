@@ -62,7 +62,7 @@
 - <a href="https://github.com/someday486/Travel-Dog.git">git link here!</a></p>
 
 
-<p style="margin-top:28px;"><strong>º MUSI --All about the Musical</strong>
+<p style="margin-top:28px;"><strong>º MUSI --All about the Musical</strong><br>
 - Musical algorithm service based on user tastes<br>
 - <a href="http://13.124.188.69/" style="font-weight:bold;">☁️ AWS click here!</a></p>
 
