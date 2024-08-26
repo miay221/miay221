@@ -59,11 +59,12 @@
 ## 🙋‍♀️ Project History
 <p style="margin-bottom:28px;"><strong>º Traval_dog --Travel Schedule Management</strong><br>
 - Travel itinerary management web service<br>
-- <a href="https://github.com/someday486/Travel-Dog.git">git link here!</a></p>
+- Github url: <a href="https://github.com/someday486/Travel-Dog.git">click here!</a></p>
 
 
 <p style="margin-top:28px;"><strong>º MUSI --All about the Musical</strong><br>
 - Musical algorithm service based on user tastes<br>
-- <a href="http://13.124.188.69/" style="font-weight:bold;">☁️ AWS click here!</a></p>
+- Github url: <a href="https://github.com/khn5906/django_project2.git">click here!</a><br>
+- AWS url☁️: <a href="http://13.124.188.69/" style="font-weight:bold;">click here!</a></p>
 
 
