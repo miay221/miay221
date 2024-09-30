@@ -65,6 +65,6 @@
 <p style="margin-top:28px;"><strong>º MUSI --All about the Musical</strong><br>
 - Musical algorithm service based on user tastes<br>
 - Github url: <a href="https://github.com/khn5906/django_project2.git">click here!</a><br>
-- AWS url☁️: <a href="http://13.124.188.69/" style="font-weight:bold;">click here!</a></p>
+- AWS url☁️: <a href="http://43.203.240.11:80" style="font-weight:bold;">click here!</a></p>
 
 
