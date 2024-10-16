@@ -54,8 +54,8 @@ aws sts get-caller-identity
 ```json
 {
   "UserId": "ABC123EXAMPLE",
-  "Account": "123456789012",
-  "Arn": "arn:aws:iam::123456789012:root"
+  "Account": "xxxxxxxxxxxx",
+  "Arn": "arn:aws:iam::xxxxxxxxxxxx:root"
 }
 ```
 
@@ -106,7 +106,7 @@ foreach ($region in $regions) {
 ### 3.2 AWS Nuke로 모든 리소스 삭제
 
 ```powershell
-aws-nuke --config "여기는 config.yaml 파일의 경로 작성"
+aws-nuke --config "<config.yaml 파일 경로>"
 ```
 
 ---
