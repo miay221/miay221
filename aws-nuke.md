@@ -77,7 +77,7 @@ regions:
 account-blacklist: []  # 블랙리스트에 계정을 추가하지 않음
 
 accounts:
-  "123456789012":  # AWS 계정 번호
+  "xxxxxxxxxxxx":  # AWS 계정 번호 (Account 쓰시면 돼요!)
     filters: {}  # 모든 리소스를 삭제
     resource-types:
       exclude: []  # 예외 리소스 없음
