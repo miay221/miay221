@@ -7,7 +7,12 @@
 
 여러분도 사용 후 반드시 **제때 정리**하시길!
 
----
+
+
+
+
+
+
 
 ## 1. 준비 작업
 
@@ -23,7 +28,7 @@ aws --version
 aws-nuke --version
 ```
 
-만약 설치가 되어 있지 않다면:
+만약 설치가 되어 있지 않다면?
 - [AWS CLI 설치 링크](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
 - [AWS Nuke 다운로드 링크](https://github.com/rebuy-de/aws-nuke/releases)
 
@@ -58,7 +63,9 @@ aws sts get-caller-identity
 
 ## 2. AWS Nuke 설정 파일 작성
 
-AWS Nuke는 **YAML 설정 파일**을 통해 삭제할 리소스를 정의합니다.
+**YAML 설정 파일**을 통해 삭제할 리소스를 정해야 하는데 이건 각자 상황에 맞게 만드셔야 합니다!
+
+저는 테스팅 목적의 계정이라 모든 리소스 삭제를 위해 filters 를 비워뒀어요
 
 **예시 config.yaml:**
 ```yaml
@@ -78,38 +85,9 @@ accounts:
 
 ---
 
-### 2.1 config.yaml 파일 작성
-
-Windows에서 **config.yaml** 파일 작성 경로:
-
-```bash
-C:\Users\<사용자 이름>\aws-nuke\config.yaml
-```
-
-PowerShell로 config.yaml을 작성하는 명령어:
-
-```powershell
-Set-Content -Path "C:\Users\<사용자 이름>\aws-nuke\config.yaml" -Value @"
-regions:
-  - "global"
-  - "ap-northeast-2"
-  - "us-east-1"
-
-account-blacklist: []
-
-accounts:
-  "123456789012":
-    filters: {}
-    resource-types:
-      exclude: []
-"@
-```
-
----
-
 ## 3. AWS 리소스 확인 및 삭제 실행
 
-### 3.1 모든 리소스 조회
+### 3.1 어떤 리소스를 사용하고 있는지 전체 조회
 
 ```powershell
 $regions = (aws ec2 describe-regions --query "Regions[].RegionName" --output text).Split()
@@ -128,7 +106,7 @@ foreach ($region in $regions) {
 ### 3.2 AWS Nuke로 모든 리소스 삭제
 
 ```powershell
-aws-nuke --config "C:\Users\<사용자 이름>\aws-nuke\config.yaml"
+aws-nuke --config "여기는 config.yaml 파일의 경로 작성"
 ```
 
 ---
@@ -136,11 +114,12 @@ aws-nuke --config "C:\Users\<사용자 이름>\aws-nuke\config.yaml"
 ## 4. 삭제 중 발생할 수 있는 문제 해결
 
 - **DependencyViolation 오류**:
-  - 인터넷 게이트웨이, 서브넷, 보안 그룹 등이 남아 있을 수 있습니다.
-  - 해당 리소스를 해제한 후 삭제해야 합니다.
+  - 인터넷 게이트웨이, 서브넷, 보안 그룹 등이 남아 있으면 삭제가 안될 수 있습니다!
+  - 먼저 해당 리소스를 해제한 후에 다시 삭제해야 합니다.
 
 - **IAM 권한 문제**:
-  - 루트 사용자 또는 삭제 권한이 있는 IAM 역할로 실행해야 합니다.
+  - 루트 사용자 또는 삭제 권한이 있는 IAM 역할 권한이 있어야 해요. 계정 확인하시고 반드시 alias 설정하기!
+  - (aws-nuke 가 모든 리소스를 삭제하는 위험한 작업이다보니 alias를 입력해서 사용자를 식별하더라구요)
 
 ---
 
@@ -165,25 +144,20 @@ aws lambda list-functions --query "Functions[].FunctionName" --output text
 
 ## 6. 계정 해지 전 최종 점검
 
-- [AWS Billing 콘솔](https://console.aws.amazon.com/billing/home)에서 모든 비용을 확인합니다.
-- 예약 인스턴스 및 Savings Plans 확인:
-```bash
-aws ec2 describe-reserved-instances --query "ReservedInstances[].ReservedInstancesId" --output text
-aws savingsplans describe-savings-plans --query "SavingsPlans[].SavingsPlanId" --output text
-```
-- 지원 플랜이 **Basic**인지 확인합니다.
+- [AWS Billing 콘솔](https://console.aws.amazon.com/billing/home)에서 비용 트래킹하면서 해지 확인하세요
+- Support 플랜이 **Basic**인지 확인합니다. (베이직이 무료 플랜임)
 
 ---
 
-## 7. 계정 해지
+## 7. 계정 해지 (선택 사항)
 
-모든 리소스를 삭제했으면 [AWS 계정 해지 절차](https://docs.aws.amazon.com/ko_kr/awsaccountbilling/latest/aboutv2/close-account.html)를 따라 계정을 해지합니다.
+[AWS 계정 해지 절차](https://docs.aws.amazon.com/ko_kr/awsaccountbilling/latest/aboutv2/close-account.html)
 
 ---
 
-## 8. 결론
+## 8. 배운 것
 
-AWS Nuke를 활용해 **모든 리소스를 안전하게 삭제**하고 계정을 정리할 수 있습니다.  
-계정을 정리할 때는 **비용 발생 여부를 꾸준히 모니터링**하는 것이 중요합니다.
+AWS Nuke가 없었다면...모든 리전마다 리소스 찾아서 해제하고 삭제하고 너무 번거로웠을 것 같은데
+다행히 활성화 중인 서비스가 없어서 전부 삭제할 수 있었어요;-; 여러분도 
 
-**빠르게 확인하고 정리**하는 습관을 잊지 마세요!
+**빠르게 확인하고 정리**하는거 잊지 마시고 과금없이 서버 잘 배포해요!
