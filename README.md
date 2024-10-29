@@ -68,3 +68,10 @@
 - AWS url☁️: <a href="http://43.203.240.11:80" style="font-weight:bold;">click here!</a></p>
 
 
+<p style="margin-top:28px;"><strong>º chatLANDI</strong><br>
+- 자연어 처리 기반 실시간 민원 처리 챗봇 서비스<br>
+- Github url: <a href="https://github.com/Dayeonee2/landimark_project.git">click here!</a><br>
+
+
+
+
