@@ -57,21 +57,20 @@
 
 
 ## 🙋‍♀️ Project History
-<p style="margin-bottom:28px;"><strong>º Traval_dog --Travel Schedule Management</strong><br>
-- Travel itinerary management web service<br>
-- Github url: <a href="https://github.com/someday486/Travel-Dog.git">click here!</a></p>
+<p style="margin-top:28px;"><strong>º MiniME</strong><br>
+- CRM 마케팅에 활용할 수 있는 리뷰 분석 서비스<br>
+- Github url: <a href="https://github.com/miay221/better_than">click here!</a><br>
 
+<p style="margin-top:28px;"><strong>º chatLANDI</strong><br>
+- 자연어 처리 기반 실시간 민원 처리 챗봇 서비스<br>
+- Github url: <a href="https://github.com/Dayeonee2/landimark_project.git">click here!</a><br>
 
 <p style="margin-top:28px;"><strong>º MUSI --All about the Musical</strong><br>
 - Musical algorithm service based on user tastes<br>
 - Github url: <a href="https://github.com/khn5906/django_project2.git">click here!</a><br>
 - AWS url☁️: <a href="http://43.203.240.11:80" style="font-weight:bold;">click here!</a></p>
 
-
-<p style="margin-top:28px;"><strong>º chatLANDI</strong><br>
-- 자연어 처리 기반 실시간 민원 처리 챗봇 서비스<br>
-- Github url: <a href="https://github.com/Dayeonee2/landimark_project.git">click here!</a><br>
-
-
-
+<p style="margin-bottom:28px;"><strong>º Traval_dog --Travel Schedule Management</strong><br>
+- Travel itinerary management web service<br>
+- Github url: <a href="https://github.com/someday486/Travel-Dog.git">click here!</a></p>
 
