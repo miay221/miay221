@@ -7,7 +7,7 @@
 
 - 🌱 I’m currently learning Data Analysis                                                                                                        
 - 📫 How to reach me: wjdwjd1945@naver.com
-- 👯 I’m looking forward to work as a Database Engineer
+- 👯 How to check Project history: [https://blog.naver.com/about_myself_](blog.naver.com/about_myself_)
 - ⚡ Fun fact: majored in German
 
 <!--
