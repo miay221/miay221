@@ -57,7 +57,7 @@
 
 
 ## 🙋‍♀️ Project History
-<p style="margin-top:28px;"><strong>º MiniME</strong><br>
+<p style="margin-top:28px;"><strong>º ALICE in wonderland</strong><br>
 - CRM 마케팅에 활용할 수 있는 리뷰 분석 서비스<br>
 - Github url: <a href="https://github.com/miay221/better_than">click here!</a><br>
 
