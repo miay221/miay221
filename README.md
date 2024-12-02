@@ -19,9 +19,7 @@
 
 
 
-<a href="https://www.credly.com/badges/22d442eb-041d-4c2b-a276-51bdc8b3a237/public_url">![aws-certified-cloud-practitioner](https://github.com/user-attachments/assets/c6c5796f-ff1f-4b4c-941b-41c33567b478)</a>
 
-<br>
 
 ## Once I've used
 <div align="center">
